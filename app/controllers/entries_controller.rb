@@ -42,7 +42,7 @@ class EntriesController < ApplicationController
     end
 
     def entry_params
-       params.permit(:prompt1, :prompt2, :prompt3, :content) 
+       params.permit(:prompt1, :prompt2, :prompt3, :content, :entry) 
     end
 
 end
