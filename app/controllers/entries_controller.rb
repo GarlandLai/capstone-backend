@@ -1,4 +1,4 @@
-class EntriesController < AppicationController
+class EntriesController < ApplicationController
     
     def index 
         @entries = Entry.all 
@@ -11,7 +11,7 @@ class EntriesController < AppicationController
     end
 
     def create
-        @entry = Entry.Create!(entry_params)
+        @entry = Entry.create!(entry_params)
         json_response(@entry, :created)
     end
 
@@ -39,11 +39,10 @@ class EntriesController < AppicationController
 
     def json_response(object, status = :ok)
         render json: object, status: status
-        
     end
 
     def entry_params
        params.permit(:prompt1, :prompt2, :prompt3, :content) 
     end
-    
+
 end
