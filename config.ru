@@ -2,5 +2,5 @@
 
 require_relative 'config/environment'
 
-require('./app')
+# require('./app')
 run Rails.application
